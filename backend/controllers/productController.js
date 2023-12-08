@@ -114,3 +114,37 @@ export const getRegular = async (req, res) => {
 
     })
 }
+
+// GET Men's Shoes
+
+export const getMenShoes = async (req, res) => {
+    const men = await Product.find({ category: 'Men' });
+    res.status(201).json({
+        success: true,
+        message: 'Mens shoes Found',
+        men,
+
+    })
+}
+// GET Women's Shoes
+
+export const getWomenShoes = async (req, res) => {
+    const women = await Product.find({ category: 'Women' });
+    res.status(201).json({
+        success: true,
+        message: 'women shoes Found',
+        women,
+
+    })
+}
+// GET Kid's Shoes
+
+export const getKidShoes = async (req, res) => {
+    const kid = await Product.find({ category: 'Kid' });
+    res.status(201).json({
+        success: true,
+        message: 'kids shoes Found',
+        kid,
+
+    })
+}

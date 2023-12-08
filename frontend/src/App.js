@@ -3,11 +3,14 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import AlwaysIconic from './Components/AllShoesTypes/AlwaysIconic';
-import CategoriCard from './Components/Categories/CategoriCard';
-
 import AllShoes from './Components/AllShoesTypes/AllShoes';
+import CategoryWiseShoes from './Components/Categories/CategoryWiseShoes';
+import CategoryCard from './Components/Categories/CategoryCard';
+import Product from './Components/AllShoesTypes/Product';
+
 
 function App() {
+
   return (
     <>
       <BrowserRouter>
@@ -16,16 +19,17 @@ function App() {
           <Route path='/' index element={
             <>
               <Navbar />
+
               <Home />
               <AlwaysIconic />
-              <CategoriCard />
+              <CategoryCard />
               <Footer />
             </>
           } />
 
           <Route path='/categori' index element={
             <>
-              <CategoriCard />
+              <CategoryCard />
             </>
           } />
 
@@ -38,9 +42,21 @@ function App() {
             </>
           } />
 
-          <Route path='/product/regular/men' index element={
+          <Route path='/product/regular/:cate' index element={
             <>
-              <AllShoes />
+
+              <Navbar />
+              <CategoryWiseShoes />
+            </>
+
+          } />
+
+          <Route path='/product/:id' index element={
+            <>
+              <>
+                <Navbar />
+                <Product />
+              </>
             </>
 
           } />

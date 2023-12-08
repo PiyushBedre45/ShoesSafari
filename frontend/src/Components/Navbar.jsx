@@ -48,13 +48,13 @@ const Navbar = () => {
               <Link to={"/newFeature"}>
                 <li>New Feature</li>
               </Link>
-              <Link to={"/men"}>
+              <Link to={"/product/regular/men"}>
                 <li>Men</li>
               </Link>
-              <Link to={"/women"}>
-                <li>Women</li>
+              <Link to={"/product/regular/women"}>
+                <button>Women</button>
               </Link>
-              <Link to={"/kids"}>
+              <Link to={"/product/regular/kid"}>
                 <li>Kids</li>
               </Link>
               <Link to={"/sale"}>

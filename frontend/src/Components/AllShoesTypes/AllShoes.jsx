@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const AllShoes = () => {
   const [regulars, setRegular] = useState([]);
@@ -7,8 +8,11 @@ const AllShoes = () => {
   const getRegular = async () => {
     const respons = await axios.get(`http://localhost:3000/product/regular`);
     setRegular(respons.data.regular);
-    console.log(respons);
   };
+
+  // const handleOnClick = (id) => {
+  //   console.log(id);
+  // };
 
   useEffect(() => {
     getRegular();
@@ -25,11 +29,14 @@ const AllShoes = () => {
                 id="tags"
                 className=" w-[450px] h-[400px] flex flex-col gap-2 "
               >
-                <img
-                  className="w-full h-full object-cover"
-                  src={regular.images[0].url}
-                  alt="loading"
-                />
+                <Link to={`/product/${regular._id}`}>
+                  <img
+                    // onClick={() => handleOnClick(regular._id)}
+                    className="w-full h-full object-cover"
+                    src={regular.images[0].url}
+                    alt="loading"
+                  />
+                </Link>
                 <div className="flex flex-col">
                   {/* <p className="text-red-800 ">Bestseller</p> */}
                   <h1 className="font-semibold text-lg">{regular.name}</h1>
@@ -42,10 +49,6 @@ const AllShoes = () => {
               </div>
             </div>
           ))}
-
-          {/*  */}
-
-          {/*  */}
         </div>
       </div>
     </>
