@@ -2,9 +2,6 @@ import bcrypt from 'bcrypt';
 import { User } from "../models/userModel.js";
 import { sendCookie } from "../utils/features.js";
 
-
-
-
 // USER REGISTRATION 
 
 export const userRegister = async (req, res) => {

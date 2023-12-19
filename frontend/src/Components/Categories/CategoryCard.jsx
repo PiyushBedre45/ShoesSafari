@@ -11,7 +11,7 @@ const CategoryCard = () => {
       <div className=" w-full h-[250px]">
         <div className=" w-[50%] mx-auto h-full flex flex-col items-center  justify-center gap-4">
           <h1 id="heading" className="text-4xl ">
-            Select Your Categori
+            Select As Per Categori
           </h1>
           <p className="text-xl text-center">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque

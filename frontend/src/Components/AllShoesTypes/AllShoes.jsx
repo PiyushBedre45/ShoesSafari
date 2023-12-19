@@ -23,11 +23,11 @@ const AllShoes = () => {
       <div className="w-full h-full mt-[40px] ">
         <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center justify-between gap-7">
           {regulars.map((regular, index) => (
-            <div className=" w-[450px] h-[540px] ">
+            <div className=" w-[450px] h-[540px]">
               <div
                 key={regular.id}
                 id="tags"
-                className=" w-[450px] h-[400px] flex flex-col gap-2 "
+                className=" w-[450px] h-[400px] flex flex-col gap-1 "
               >
                 <Link to={`/product/${regular._id}`}>
                   <img

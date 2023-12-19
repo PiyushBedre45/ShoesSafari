@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const AlwaysIconic = () => {
   const [ico, setIconic] = useState([]);
@@ -7,7 +8,7 @@ const AlwaysIconic = () => {
     const respons = await axios.get(`http://localhost:3000/product/iconic`);
 
     setIconic(respons.data.iconic);
-    console.log(ico);
+    console.log(respons.data.iconic);
   };
 
   useEffect(() => {
@@ -33,16 +34,18 @@ const AlwaysIconic = () => {
 
       {/* Maping of Always iconic */}
 
-      <div className=" w-full h-[85vh]  ">
+      <div className="w-full h-[85vh]">
         <div className=" w-[90%] mx-auto h-full flex flex-wrap items-center justify-between ">
           {ico.map((shoe, index) => (
             <div key={shoe.id}>
               <div>
-                <img
-                  className="w-[250px] h-[250px] object-cover"
-                  src={shoe.images[0].url}
-                  alt="load"
-                />
+                <Link to={`/product/${shoe._id}`}>
+                  <img
+                    className="w-[250px] h-[250px] object-cover"
+                    src={shoe.images[0].url}
+                    alt="load"
+                  />
+                </Link>
               </div>
             </div>
           ))}

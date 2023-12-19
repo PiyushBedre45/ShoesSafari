@@ -8,7 +8,6 @@ const Product = () => {
 
   const getDetails = async () => {
     const respons = await axios.get(`http://localhost:3000/product/${id}`);
-    console.log(respons.data.product);
     setProducts(respons.data.product);
   };
 
@@ -18,13 +17,7 @@ const Product = () => {
 
   return (
     <>
-      {/* {products.map((pro) => {
-        <div>
-          <h1>{pro.name}</h1>
-        </div>;
-      })} */}
-
-      <div className=" w-full h-[90vh] flex items-center justify-center gap-[40px]">
+      <div className=" w-full h-[90vh] flex items-center justify-center gap-[40px] ">
         <div className=" w-[530px] h-[620px] ">
           <img
             className="w-full h-full object-cover rounded-md"

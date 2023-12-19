@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div className=" w-full h-[600px] mt-10 ">
+      {/* <div className=" w-full h-[600px] mt-10 ">
         <div className=" w-[95%] mx-auto h-full">
           <img
             className="w-full h-full object-cover rounded-md"
@@ -12,7 +12,7 @@ const Home = () => {
             alt="loading"
           />
         </div>
-      </div>
+      </div> */}
 
       <div className=" w-full h-[250px] mt-[40px]  ">
         <div className=" w-[50%] mx-auto h-full flex flex-col items-center  justify-center gap-4">

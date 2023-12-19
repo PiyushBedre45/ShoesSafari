@@ -7,6 +7,8 @@ import AllShoes from './Components/AllShoesTypes/AllShoes';
 import CategoryWiseShoes from './Components/Categories/CategoryWiseShoes';
 import CategoryCard from './Components/Categories/CategoryCard';
 import Product from './Components/AllShoesTypes/Product';
+import BackgroundImages from './Components/BackgroundImages';
+
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
           <Route path='/' index element={
             <>
               <Navbar />
-
+              <BackgroundImages />
               <Home />
               <AlwaysIconic />
               <CategoryCard />
@@ -47,16 +49,18 @@ function App() {
 
               <Navbar />
               <CategoryWiseShoes />
+
             </>
 
           } />
 
           <Route path='/product/:id' index element={
             <>
-              <>
-                <Navbar />
-                <Product />
-              </>
+
+              <Navbar />
+              <Product />
+
+
             </>
 
           } />
