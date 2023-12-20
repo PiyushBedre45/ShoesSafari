@@ -86,11 +86,17 @@ const Navbar = () => {
               onClick={clickOnCross}
             />
           </div>
-          <div className="w-[80%] mx-auto mt-[20px] flex flex-col gap-4 text-2xl font-semibold ">
+          <div className="w-[80%] mx-auto mt-[20px] flex flex-col gap-4 text-2xl font-semibold list-none ">
             <h1>New & Featured</h1>
-            <h1>Men</h1>
-            <h1>Women</h1>
-            <h1>Kids</h1>
+            <Link to={"/product/regular/men"}>
+              <li>Men</li>
+            </Link>
+            <Link to={"/product/regular/women"}>
+              <button>Women</button>
+            </Link>
+            <Link to={"/product/regular/kid"}>
+              <li>Kids</li>
+            </Link>
             <h1>Sale</h1>
             <h1>SNEAKERS</h1>
           </div>
