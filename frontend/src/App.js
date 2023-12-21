@@ -8,6 +8,9 @@ import CategoryWiseShoes from './Components/Categories/CategoryWiseShoes';
 import CategoryCard from './Components/Categories/CategoryCard';
 import Product from './Components/AllShoesTypes/Product';
 import BackgroundImages from './Components/BackgroundImages';
+import AllMarchandise from './Components/Marchandise/AllMarchandise';
+import MarchanNavbar from './Components/Marchandise/MarchanNavbar';
+import Marchandise from './Components/Marchandise/Marchandise';
 
 
 
@@ -59,6 +62,33 @@ function App() {
 
               <Navbar />
               <Product />
+
+
+            </>
+
+          } />
+
+
+
+
+          <Route path='/marchandise' index element={
+            <>
+
+
+              <MarchanNavbar />
+              <AllMarchandise />
+
+
+            </>
+
+          } />
+
+
+          <Route path='/marchandise/:id' index element={
+            <>
+
+              <Navbar />
+              <Marchandise />
 
 
             </>
