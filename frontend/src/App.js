@@ -1,16 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Components/Home';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Home from './Components/Important/Home';
+import Navbar from './Components/Important/Navbar';
+import Footer from './Components/Important/Footer';
 import AlwaysIconic from './Components/AllShoesTypes/AlwaysIconic';
 import AllShoes from './Components/AllShoesTypes/AllShoes';
 import CategoryWiseShoes from './Components/Categories/CategoryWiseShoes';
 import CategoryCard from './Components/Categories/CategoryCard';
 import Product from './Components/AllShoesTypes/Product';
-import BackgroundImages from './Components/BackgroundImages';
+import BackgroundImages from './Components/Important/BackgroundImages';
 import AllMarchandise from './Components/Marchandise/AllMarchandise';
 import MarchanNavbar from './Components/Marchandise/MarchanNavbar';
 import Marchandise from './Components/Marchandise/Marchandise';
+import Login from './Components/Authetication/Login';
+import Registration from './Components/Authetication/Registration';
+import { Toaster } from 'react-hot-toast';
+
 
 
 
@@ -77,11 +81,11 @@ function App() {
 
               <MarchanNavbar />
               <AllMarchandise />
-
-
             </>
 
           } />
+
+
 
 
           <Route path='/marchandise/:id' index element={
@@ -89,16 +93,36 @@ function App() {
 
               <Navbar />
               <Marchandise />
-
-
             </>
-
           } />
 
+
+
+          <Route path='/login' index element={
+            <>
+              <Navbar />
+              <Login />
+            </>
+          } />
+          <Route path='/register' index element={
+            <>
+              <Navbar />
+              <Registration />
+            </>
+          } />
+
+
+
         </Routes>
+        <Toaster />
       </BrowserRouter>
     </>
   );
 }
 
 export default App;
+
+
+
+
+

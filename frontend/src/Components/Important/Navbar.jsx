@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiBars3BottomRight } from "react-icons/hi2";
 // import { SiNike } from "react-icons/si";
@@ -9,6 +9,7 @@ import { BsBoxSeam } from "react-icons/bs";
 import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { FiHelpCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { Context } from "../..";
 
 const clickOnBars = () => {
   const floatDiv = document.querySelector("#box");
@@ -27,6 +28,9 @@ const clickOnCross = () => {
 };
 
 const Navbar = () => {
+  const { isAuthenticate, SetIsAuthenticate } = useContext(Context);
+  console.log(isAuthenticate);
+
   return (
     <>
       <div
@@ -126,9 +130,15 @@ const Navbar = () => {
             <button className="w-[100px] h-[40px] bg-black rounded-3xl text-white transform hover:scale-105 duration-300">
               Join Us
             </button>
-            <button className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300">
-              Sign in
-            </button>
+            {isAuthenticate ? (
+              <button className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300">
+                Logout
+              </button>
+            ) : (
+              <button className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300">
+                Login
+              </button>
+            )}
           </div>
         </div>
       </div>

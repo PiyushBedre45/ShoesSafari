@@ -55,7 +55,7 @@ export const userLogin = async (req, res) => {
             message: 'Invalid Email or Password'
         })
     }
-    sendCookie(user, res, `wellcome back , ${user.name}`, 202);
+    sendCookie(user, res, `Wellcome , ${user.name}`, 202);
 
 
 }
