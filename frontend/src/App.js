@@ -14,6 +14,7 @@ import Marchandise from './Components/Marchandise/Marchandise';
 import Login from './Components/Authetication/Login';
 import Registration from './Components/Authetication/Registration';
 import { Toaster } from 'react-hot-toast';
+import Cart from './Components/Cart/Cart';
 
 
 
@@ -108,6 +109,13 @@ function App() {
             <>
               <Navbar />
               <Registration />
+            </>
+          } />
+
+
+          <Route path='/cart' index element={
+            <>
+              <Cart />
             </>
           } />
 

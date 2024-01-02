@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useCart } from "../../context/cartContext";
+import toast from "react-hot-toast";
 
 const Product = () => {
   const [products, setProducts] = useState();
   const { id } = useParams();
+  const [cart, setCart] = useCart([]);
 
   const getDetails = async () => {
     const respons = await axios.get(`http://localhost:3000/product/${id}`);
@@ -42,9 +45,17 @@ const Product = () => {
               voluptas delectus culpa dolores.
             </p>
             <div className="w-[full] flex flex-col gap-2 mt-4">
-              <button className="w-full h-[60px] bg-black rounded-[50px] text-white transform hover:bg-gray-700 duration-100 text-xl font-medium">
-                Add to Bag
-              </button>
+              <Link to={"/cart"}>
+                <button
+                  className="w-full h-[60px] bg-black rounded-[50px] text-white transform hover:bg-gray-700 duration-100 text-xl font-medium"
+                  onClick={() => {
+                    setCart([...cart, products]);
+                    toast.success("Successfully Added");
+                  }}
+                >
+                  Add to Bag
+                </button>
+              </Link>
               <button className="w-full h-[60px] rounded-[50px] border-2 border-gray-300 hover:border-black transform duration-300 text-xl font-medium">
                 Favourite
               </button>

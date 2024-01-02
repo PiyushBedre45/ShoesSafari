@@ -2,6 +2,7 @@ import React, { createContext, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { CartProvider } from './context/cartContext';
 
 export const server = "http://localhost:3000";
 export const Context = createContext({ isAuthenticate: false })
@@ -12,7 +13,11 @@ const AppWrapper = () => {
     <Context.Provider value={
       { isAuthenticate, SetIsAuthenticate, }
     }>
-      <App />
+      <CartProvider>
+
+        <App />
+
+      </CartProvider>
     </Context.Provider>
   )
 
