@@ -26,7 +26,6 @@ const Cart = () => {
                 {/* Mapping */}
                 {cart.map((item) => (
                   <div>
-                    <h1>{item.price}</h1>
                     <div className=" w-[100%] h-[260px] flex flex-col items-center justify-center gap-3 mt-[20px]">
                       <div className=" w-[90%] mx-auto h-[80%] flex items-center justify-center gap-3 ">
                         <div className="w-[180px] h-[180px]">
