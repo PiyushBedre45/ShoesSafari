@@ -10,10 +10,6 @@ const AllShoes = () => {
     setRegular(respons.data.regular);
   };
 
-  // const handleOnClick = (id) => {
-  //   console.log(id);
-  // };
-
   useEffect(() => {
     getRegular();
   }, []);
@@ -31,7 +27,6 @@ const AllShoes = () => {
               >
                 <Link to={`/product/${regular._id}`}>
                   <img
-                    // onClick={() => handleOnClick(regular._id)}
                     className="w-full h-full object-cover"
                     src={regular.images[0].url}
                     alt="loading"

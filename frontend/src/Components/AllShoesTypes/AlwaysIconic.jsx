@@ -6,9 +6,7 @@ const AlwaysIconic = () => {
   const [ico, setIconic] = useState([]);
   const iconicShoes = async () => {
     const respons = await axios.get(`http://localhost:3000/product/iconic`);
-
     setIconic(respons.data.iconic);
-    console.log(respons.data.iconic);
   };
 
   useEffect(() => {

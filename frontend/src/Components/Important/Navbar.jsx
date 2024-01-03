@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiBars3BottomRight } from "react-icons/hi2";
+import { PiShoppingCartSimpleDuotone } from "react-icons/pi";
 // import { SiNike } from "react-icons/si";
 import { RxCross2 } from "react-icons/rx";
 import { SiJordan } from "react-icons/si";
@@ -17,20 +18,16 @@ const clickOnBars = () => {
   floatDiv.classList.add("right-[0%]");
 
   document.body.classList.add("overflow-y-hidden");
-  console.log("hipiyu");
 };
 const clickOnCross = () => {
   const floatDiv = document.querySelector("#box");
   floatDiv.classList.remove("right-[0%]");
   floatDiv.classList.add("right-[-100%]");
   document.body.classList.remove("overflow-y-hidden");
-  console.log("hipiyu");
 };
 
 const Navbar = () => {
-  const { isAuthenticate, SetIsAuthenticate } = useContext(Context);
-  console.log(isAuthenticate);
-
+  const { isAuthenticate } = useContext(Context);
   return (
     <>
       <div
@@ -61,8 +58,8 @@ const Navbar = () => {
               <Link to={"/product/regular/kid"}>
                 <li>Kids</li>
               </Link>
-              <Link to={"/sale"}>
-                <li>Sale</li>
+              <Link to={"/gift"}>
+                <li>Gift🎁</li>
               </Link>
               <Link to={"/marchandise"}>
                 <li>Marchandise</li>
@@ -70,10 +67,13 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="flex gap-2 items-center text-4xl ">
-            <CiSearch className="p-1 rounded-3xl hover:bg-gray-200 " />
+          <div className="flex gap-4 items-center text-4xl ">
+            <CiSearch className="p-1 rounded-md hover:bg-gray-200 " />
+            <Link to={"/cart"}>
+              <PiShoppingCartSimpleDuotone className="text-[35px] p-1 rounded-md hover:bg-gray-200 " />
+            </Link>
             <HiBars3BottomRight
-              className="p-1 rounded-3xl hover:bg-gray-200"
+              className="p-1 rounded-md hover:bg-gray-200"
               onClick={clickOnBars}
             />
           </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
         >
           <div className="  w-[100%] h-[40px] flex items-center justify-end pr-[10px] mt-[20px] ">
             <RxCross2
-              className="p-1 rounded-3xl hover:bg-gray-200 text-4xl mr-[20px]"
+              className="p-1 rounded-md hover:bg-gray-200 text-4xl mr-[20px]"
               onClick={clickOnCross}
             />
           </div>
@@ -141,6 +141,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
+        <hr className="border-1 border-gray-300 w-[100%] rounded-md mt-[10px]" />
       </div>
     </>
   );

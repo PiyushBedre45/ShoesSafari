@@ -7,7 +7,6 @@ const AllMarchandise = () => {
 
   const getAllMarchandise = async () => {
     const respons = await axios.get(`http://localhost:3000/marchandise`);
-    console.log(respons.data.marchan);
     setAllMarchandise(respons.data.marchan);
   };
   useEffect(() => {

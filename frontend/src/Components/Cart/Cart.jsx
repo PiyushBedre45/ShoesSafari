@@ -4,6 +4,7 @@ import Login from "../Authetication/Login";
 import { useCart } from "../../context/cartContext";
 import Navbar from "../Important/Navbar";
 import Footer from "../Important/Footer";
+import { AiTwotoneDelete } from "react-icons/ai";
 
 const Cart = () => {
   const [cart, setCart] = useCart();
@@ -13,12 +14,17 @@ const Cart = () => {
   // reduce is use to calculate all the prices from array
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
+  // filter is use to alter the arr elements
+  const deleteItemFromCart = (itemId) => {
+    setCart(cart.filter((cartItem) => cartItem._id !== itemId));
+  };
+
   return (
     <>
       {isAuthenticate ? (
         <>
           <Navbar />
-          <div className=" w-full mt-[50px] ">
+          <div className=" w-full mt-[40px] ">
             <div className=" w-[70%]  mx-auto flex ">
               <div className=" w-full flex flex-col ">
                 {/* Heading */}
@@ -37,7 +43,7 @@ const Cart = () => {
                           />
                         </div>
                         <div className=" w-[350px] h-[180px] flex flex-col">
-                          <div className="w-[90%] mx-auto flex flex-col gap-1 pt-2">
+                          <div className="w-[90%] mx-auto flex flex-col gap-2 pt-2">
                             {/* Discription */}
                             <h1 id="Product" className="text-xl font-semibold ">
                               {item.name}
@@ -46,12 +52,16 @@ const Cart = () => {
                               {item.discription}
                             </p>
                             <p className="text-gray-400 text-[17px]">
-                              Lorem ipsum dolor sit amet, consectetur
-                              adipisicing elit.
+                              Lorem ipsum dolor hsaja jsdhf sug .
                             </p>
                             <h1 id="Product" className="text-md font-medium">
                               MRP : ₹ {item.price}💰
                             </h1>
+                            {/* Delete */}
+                            <AiTwotoneDelete
+                              className="text-2xl"
+                              onClick={() => deleteItemFromCart(item._id)}
+                            />
                           </div>
                         </div>
                       </div>

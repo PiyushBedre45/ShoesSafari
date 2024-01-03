@@ -39,6 +39,7 @@ const MarchanNavbar = () => {
           </div>
         </div>
       </div>
+      <hr className="border-1 border-gray-300 w-[100%] rounded-md mt-[10px]" />
     </>
   );
 };
