@@ -3,14 +3,13 @@ import React, { useContext, useState } from "react";
 import { SiJordan } from "react-icons/si";
 import { Context, server } from "../..";
 import toast from "react-hot-toast";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Registration = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { isAuthenticate, SetIsAuthenticate } = useContext(Context);
-
   const submitHandler = async (e) => {
     e.preventDefault();
     console.log(name, email, password);
@@ -30,16 +29,11 @@ const Registration = () => {
         }
       );
       toast.success(data.message);
-      SetIsAuthenticate(true);
+      navigate("/login");
     } catch (error) {
       console.log(error);
-      SetIsAuthenticate(false);
     }
   };
-
-  if (isAuthenticate) {
-    return <Navigate to={"/login"} />;
-  }
 
   return (
     <>

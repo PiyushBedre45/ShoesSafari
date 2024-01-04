@@ -13,5 +13,7 @@ export const sendCookie = (user, res, message, status = 200) => {
         ({
             success: true,
             message,
+            user
+
         })
 }

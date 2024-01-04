@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { PiShoppingCartSimpleDuotone } from "react-icons/pi";
+import { CgProfile } from "react-icons/cg";
 // import { SiNike } from "react-icons/si";
 import { RxCross2 } from "react-icons/rx";
 import { SiJordan } from "react-icons/si";
@@ -11,6 +12,7 @@ import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { FiHelpCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { Context } from "../..";
+import { useAuth } from "../../context/authContext";
 
 const clickOnBars = () => {
   const floatDiv = document.querySelector("#box");
@@ -28,6 +30,8 @@ const clickOnCross = () => {
 
 const Navbar = () => {
   const { isAuthenticate } = useContext(Context);
+  const [auth, setAuth] = useAuth();
+
   return (
     <>
       <div
@@ -70,7 +74,7 @@ const Navbar = () => {
           <div className="flex gap-4 items-center text-4xl ">
             <CiSearch className="p-1 rounded-md hover:bg-gray-200 " />
             <Link to={"/cart"}>
-              <PiShoppingCartSimpleDuotone className="text-[35px] p-1 rounded-md hover:bg-gray-200 " />
+              <PiShoppingCartSimpleDuotone className="text-[36px] p-1 rounded-md hover:bg-gray-200 " />
             </Link>
             <HiBars3BottomRight
               className="p-1 rounded-md hover:bg-gray-200"
@@ -82,7 +86,7 @@ const Navbar = () => {
       <div>
         <div
           id="box"
-          className="w-[300px] h-[100vh] bg-white fixed right-[-100%] top-0 transition-all duration-500  z-20 "
+          className="w-[300px] h-[100vh] bg-white fixed right-[-100%] top-0 transition-all duration-500 z-20 "
         >
           <div className="  w-[100%] h-[40px] flex items-center justify-end pr-[10px] mt-[20px] ">
             <RxCross2
@@ -91,7 +95,15 @@ const Navbar = () => {
             />
           </div>
           <div className="w-[80%] mx-auto mt-[20px] flex flex-col gap-4 text-2xl font-semibold list-none ">
-            <h1>New & Featured</h1>
+            <div className="flex gap-1 items-center">
+              <CgProfile />
+              {isAuthenticate ? (
+                <h1 className="text-[15px]">Hi,{auth.user.name}</h1>
+              ) : (
+                <h1 className="text-[15px]">Hi,User</h1>
+              )}
+            </div>
+
             <Link to={"/product/regular/men"}>
               <li>Men</li>
             </Link>

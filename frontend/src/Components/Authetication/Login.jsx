@@ -4,15 +4,16 @@ import { Link, Navigate } from "react-router-dom";
 import { Context, server } from "../..";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useAuth } from "../../context/authContext";
 
 const Login = () => {
+  const [auth, setAuth] = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { isAuthenticate, SetIsAuthenticate } = useContext(Context);
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(email, password);
     try {
       const { data } = await axios.post(
         `${server}/login`,
@@ -27,6 +28,10 @@ const Login = () => {
           withCredentials: true,
         }
       );
+      setAuth({
+        ...auth,
+        user: data.user,
+      });
       toast.success(data.message);
       SetIsAuthenticate(true);
     } catch (error) {

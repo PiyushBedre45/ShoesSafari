@@ -50,7 +50,7 @@ export const userLogin = async (req, res) => {
     const isMatch = await bcrypt.compare(password, user.password)
 
     if (!isMatch) {
-        return res.status(202).json({
+        return res.status(500).json({
             success: false,
             message: 'Invalid Email or Password'
         })
@@ -59,4 +59,5 @@ export const userLogin = async (req, res) => {
 
 
 }
+
 
