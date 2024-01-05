@@ -5,11 +5,11 @@ import { useCart } from "../../context/cartContext";
 import Navbar from "../Important/Navbar";
 import Footer from "../Important/Footer";
 import { AiTwotoneDelete } from "react-icons/ai";
+import { SiLg } from "react-icons/si";
 
 const Cart = () => {
   const [cart, setCart] = useCart();
   const { isAuthenticate, SetIsAuthenticate } = useContext(Context);
-  console.log(cart);
 
   // reduce is use to calculate all the prices from array
   const total = cart.reduce((sum, item) => sum + item.price, 0);
@@ -18,6 +18,9 @@ const Cart = () => {
   const deleteItemFromCart = (itemId) => {
     setCart(cart.filter((cartItem) => cartItem._id !== itemId));
   };
+
+  const taxes = 0;
+  const newTaxes = cart.length == 0 ? taxes : taxes + 1250;
 
   return (
     <>
@@ -83,13 +86,22 @@ const Cart = () => {
                       <h1 className="text-[18px] font-semibold">
                         Esitimate Dilivary & Handling
                       </h1>
-                      <p className="text-[18px] font-semibold">₹ 1250</p>
+
+                      {cart.length == 0 ? (
+                        <p className="text-[18px] font-semibold">
+                          ₹ {newTaxes}
+                        </p>
+                      ) : (
+                        <p className="text-[18px] font-semibold">
+                          ₹ {newTaxes}
+                        </p>
+                      )}
                     </div>
                     <hr className="border-1 border-gray-300 w-[100%] rounded-md" />
                     <div className="flex justify-between">
                       <h1 className="text-[18px] font-semibold">Total</h1>
                       <p className="text-[18px] font-semibold">
-                        ₹ {total + 1250}
+                        ₹ {total + newTaxes}
                       </p>
                     </div>
                     <hr className="border-1 border-gray-300 w-[100%] rounded-md" />

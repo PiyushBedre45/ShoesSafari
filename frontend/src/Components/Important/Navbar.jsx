@@ -98,9 +98,9 @@ const Navbar = () => {
             <div className="flex gap-1 items-center">
               <CgProfile />
               {isAuthenticate ? (
-                <h1 className="text-[15px]">Hi,{auth.user.name}</h1>
+                <h1 className="text-[15px]">Hi, {auth.user.name}</h1>
               ) : (
-                <h1 className="text-[15px]">Hi,User</h1>
+                <h1 className="text-[15px]">Hi, User</h1>
               )}
             </div>
 
