@@ -115,6 +115,18 @@ export const getRegular = async (req, res) => {
     })
 }
 
+// GET FOOTBALL SHOES
+
+export const getFootballShoes = async (req, res) => {
+    const football = await Product.find({ shoesType: 'Football' });
+    res.status(201).json({
+        success: true,
+        message: 'Football Shoes Found',
+        football,
+
+    })
+}
+
 // GET Men's Shoes
 
 export const getMenShoes = async (req, res) => {

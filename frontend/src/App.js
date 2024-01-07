@@ -15,6 +15,7 @@ import Login from './Components/Authetication/Login';
 import Registration from './Components/Authetication/Registration';
 import { Toaster } from 'react-hot-toast';
 import Cart from './Components/Cart/Cart';
+import Football from './Components/AllShoesTypes/Football';
 
 
 
@@ -52,6 +53,16 @@ function App() {
             </>
           } />
 
+
+          <Route path='/football' index element={
+            <>
+              <Navbar />
+              <Football />
+              <Footer />
+
+            </>
+          } />
+
           <Route path='/product/regular/:cate' index element={
             <>
 
@@ -67,6 +78,7 @@ function App() {
 
               <Navbar />
               <Product />
+              <Footer />
 
 
             </>
@@ -94,6 +106,7 @@ function App() {
 
               <Navbar />
               <Marchandise />
+              <Footer />
             </>
           } />
 
@@ -101,13 +114,13 @@ function App() {
 
           <Route path='/login' index element={
             <>
-              <Navbar />
+
               <Login />
             </>
           } />
           <Route path='/register' index element={
             <>
-              <Navbar />
+
               <Registration />
             </>
           } />

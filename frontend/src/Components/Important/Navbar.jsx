@@ -114,17 +114,21 @@ const Navbar = () => {
               <li>Kids</li>
             </Link>
             <h1>Sale</h1>
-            <h1>SNEAKERS</h1>
+            <Link to={"/football"}>
+              <h1>Football Shoes</h1>
+            </Link>
           </div>
           <div className="text-3xl w-[70%] mx-auto  mt-[40px] flex gap-4 items-center">
             <SiJordan />
             <h1 className="text-xl">Jordan</h1>
           </div>
           <div className="w-[80%] mx-auto flex flex-col gap-4 text-2xl mt-[40px]  ">
-            <div className="flex items-center gap-5">
-              <PiBagLight className="cursor-pointer" />
-              <h1 className="text-xl">Bag</h1>
-            </div>
+            <Link to={"/cart"}>
+              <div className="flex items-center gap-5">
+                <PiBagLight className="cursor-pointer" />
+                <h1 className="text-xl">Bag</h1>
+              </div>
+            </Link>
             <div className="flex items-center gap-5">
               <BsBoxSeam className="cursor-pointer" />
               <h1 className="text-xl">Order</h1>
@@ -139,17 +143,36 @@ const Navbar = () => {
             </div>
           </div>
           <div className=" text-md font-semibold flex items-center gap-4 justify-center mt-[40px]">
-            <button className="w-[100px] h-[40px] bg-black rounded-3xl text-white transform hover:scale-105 duration-300">
-              Join Us
-            </button>
             {isAuthenticate ? (
-              <button className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300">
+              <Link to={"/profile"}>
+                <button className="w-[100px] h-[40px] bg-black rounded-3xl text-white transform hover:scale-105 duration-300">
+                  Profile
+                </button>
+              </Link>
+            ) : (
+              <Link to={"/register"}>
+                <button className="w-[100px] h-[40px] bg-black rounded-3xl text-white transform hover:scale-105 duration-300">
+                  Join Us
+                </button>
+              </Link>
+            )}
+
+            {isAuthenticate ? (
+              <button
+                className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300"
+                onClick={() => {
+                  alert("really");
+                  window.location.reload();
+                }}
+              >
                 Logout
               </button>
             ) : (
-              <button className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300">
-                Login
-              </button>
+              <Link to={"/login"}>
+                <button className="w-[100px] h-[40px] rounded-3xl border-2 border-black transform hover:scale-105 duration-300">
+                  Login
+                </button>
+              </Link>
             )}
           </div>
         </div>

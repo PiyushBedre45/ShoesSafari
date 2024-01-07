@@ -64,7 +64,7 @@ const Login = () => {
                 <input
                   className="border-2 border-gray-400 hover:border-black w-full h-[50px]  rounded-md p-4"
                   type="email"
-                  placeholder="Email"
+                  placeholder=" Registered Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
