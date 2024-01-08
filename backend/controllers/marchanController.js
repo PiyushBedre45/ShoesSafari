@@ -39,3 +39,47 @@ export const getMarchandise = async (req, res) => {
         marchan,
     })
 }
+
+// GET Men's MERCHANDISE
+
+export const getMenMerchandise = async (req, res) => {
+    const menMerchan = await Marchandise.find({ category: "Men" });
+    res.status(201).json({
+        success: true,
+        message: 'Mens Merchandise Found',
+        menMerchan
+    })
+}
+// GET Women's MERCHANDISE
+
+export const getWomenMerchandise = async (req, res) => {
+    const womenMerchan = await Marchandise.find({ category: "Women" });
+    res.status(201).json({
+        success: true,
+        message: 'Women Merchandise Found',
+        womenMerchan,
+
+    })
+}
+// GET Bags 
+
+export const getBags = async (req, res) => {
+    const bag = await Marchandise.find({ itemType: "Bag" });
+    res.status(201).json({
+        success: true,
+        message: 'bags Merchandise Found',
+        bag,
+
+    })
+}
+// GET Caps 
+
+export const getCaps = async (req, res) => {
+    const cap = await Marchandise.find({ itemType: "Cap" });
+    res.status(201).json({
+        success: true,
+        message: 'caps Merchandise Found',
+        cap,
+
+    })
+}

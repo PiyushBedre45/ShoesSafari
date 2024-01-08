@@ -16,6 +16,7 @@ import Registration from './Components/Authetication/Registration';
 import { Toaster } from 'react-hot-toast';
 import Cart from './Components/Cart/Cart';
 import Football from './Components/AllShoesTypes/Football';
+import CategoryWiseMerchandise from './Components/Marchandise/CategoryWiseMarchandise';
 
 
 
@@ -68,6 +69,17 @@ function App() {
 
               <Navbar />
               <CategoryWiseShoes />
+
+            </>
+
+          } />
+          <Route path='/marchandise/regular/:category' index element={
+            <>
+
+
+              <MarchanNavbar />
+              <CategoryWiseMerchandise />
+              <Footer />
 
             </>
 

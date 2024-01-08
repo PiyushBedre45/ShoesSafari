@@ -19,7 +19,7 @@ const AllMarchandise = () => {
           {allMarchandise.map((marchans, index) => (
             <div className=" w-[450px] h-[540px]">
               <div
-                key={marchans.id}
+                key={marchans._id}
                 id="tags"
                 className=" w-[450px] h-[400px] flex flex-col gap-1 "
               >

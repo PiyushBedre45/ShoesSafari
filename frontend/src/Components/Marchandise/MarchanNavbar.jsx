@@ -21,19 +21,16 @@ const MarchanNavbar = () => {
             </div>
           </div>
           <div className="  w-[85%] h-[90%] mx-auto flex items-center justify-center gap-6 text-lg font-semibold list-none  ">
-            <Link to={"/"}>
+            <Link to={"/marchandise/regular/men"}>
               <li>Men</li>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/marchandise/regular/women"}>
               <button>Women</button>
             </Link>
-            <Link to={"/"}>
-              <li>Kids</li>
-            </Link>
-            <Link to={"/"}>
+            <Link to={"/marchandise/regular/bag"}>
               <li>Bags</li>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/marchandise/regular/cap"}>
               <li>Caps</li>
             </Link>
           </div>
