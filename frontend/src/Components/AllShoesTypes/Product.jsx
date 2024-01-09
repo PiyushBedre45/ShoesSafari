@@ -20,15 +20,15 @@ const Product = () => {
 
   return (
     <>
-      <div className=" w-full h-[90vh] flex items-center justify-center gap-[40px] ">
-        <div className=" w-[530px] h-[620px] ">
+      <div className=" w-full h-[90vh] flex items-center justify-center gap-[80px] ">
+        <div className=" w-[460px] h-[550px] ">
           <img
             className="w-full h-full object-cover rounded-md"
             src={products?.images[0].url}
             alt=""
           />
         </div>
-        <div className=" w-[400px] h-[620px] ">
+        <div className=" w-[400px] h-[550px] ">
           <div className=" w-[90%] mx-auto flex flex-col gap-1">
             <h1 id="Product" className="text-3xl font ">
               {products?.name}

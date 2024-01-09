@@ -17,6 +17,48 @@ const Football = () => {
 
   return (
     <>
+      {/* Images */}
+
+      <div className=" w-[full] h-[700px] mt-[50px]">
+        <div className="w-[85%] h-full mx-auto flex justify-between items-center ">
+          <div className=" w-[600px] h-full  ">
+            <img
+              className="w-full h-full object-cover rounded-sm  "
+              src="https://images.unsplash.com/photo-1574772135913-d519461c3996?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="loadind"
+            />
+          </div>
+          <div className=" w-[600px] h-full ">
+            <img
+              className="w-full h-full object-cover rounded-sm  "
+              src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D"
+              alt="loadind"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Heading */}
+      <div className=" w-full h-[250px]  ">
+        <div className=" w-[50%] mx-auto h-full flex flex-col items-center  justify-center gap-4">
+          <h1 id="heading" className="text-4xl ">
+            Football is Love
+          </h1>
+          <p className="text-xl text-center">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            animi molestiae similique dignissimos repellendus dicta, iusto
+            expedita eius consectetur natus
+          </p>
+          {/* <a href="#footballShoes">
+            <button className="w-[150px] h-[50px] bg-black rounded-3xl text-white transform hover:scale-105 duration-300 text-lg">
+              Shop Now
+            </button>
+          </a> */}
+        </div>
+      </div>
+
+      {/* Mapping */}
+
       <div className="w-full h-full mt-[40px] ">
         <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center justify-between gap-7">
           {football.map((foot, index) => (

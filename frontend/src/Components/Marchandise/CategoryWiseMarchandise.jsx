@@ -37,7 +37,11 @@ const CategoryWiseMerchandise = () => {
 
   return (
     <>
-      <div className=" w-[50%] mx-auto h-full flex flex-col items-center  justify-center gap-4 mt-[40px]"></div>
+      <div className=" w-[50%] mx-auto h-full flex flex-col items-center  justify-center gap-4 mt-[40px]">
+        <h1 id="heading" className="text-4xl ">
+          Select your Marchandisse
+        </h1>
+      </div>
       <div className="w-full h-full mt-[60px] ">
         <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center justify-between gap-7">
           {merchandise.map((marchan, index) => (
