@@ -43,7 +43,7 @@ const CategoryWiseMerchandise = () => {
         </h1>
       </div>
       <div className="w-full h-full mt-[60px] ">
-        <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center justify-between gap-7">
+        <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center gap-7">
           {merchandise.map((marchan, index) => (
             <div className=" w-[450px] h-[540px] ">
               <div
@@ -63,9 +63,7 @@ const CategoryWiseMerchandise = () => {
                   <h1 className="font-semibold text-lg">{marchan.name}</h1>
                   <p className="text-gray-400 ">{marchan.discription}</p>
                   <p className="text-gray-400">2 Colours</p>
-                  <h1 className="font-semibold text-lg">
-                    MRP : ₹ {marchan.price}
-                  </h1>
+                  <h1 className="font-semibold text-lg">₹ {marchan.price}</h1>
                 </div>
               </div>
             </div>

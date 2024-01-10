@@ -35,7 +35,7 @@ const Product = () => {
             </h1>
             <p className="text-gray-400 text-[17px]">{products?.discription}</p>
             <h1 id="Product" className="text-2xl font-medium">
-              MRP : ₹ {products?.price}
+              ₹ {products?.price}
             </h1>
             <p className="text-gray-400">Also included taxes</p>
             <p className="text-[18px] ">

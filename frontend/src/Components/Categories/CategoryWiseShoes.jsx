@@ -41,7 +41,7 @@ const CategoryWiseShoes = () => {
         </h1>
       </div>
       <div className="w-full h-full mt-[60px] ">
-        <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center justify-between gap-7">
+        <div className="w-[93%] mx-auto h-full flex flex-wrap items-center gap-7">
           {shoes.map((shoe, index) => (
             <div className=" w-[450px] h-[540px] ">
               <div
@@ -58,12 +58,12 @@ const CategoryWiseShoes = () => {
                 </Link>
                 <div className="flex flex-col">
                   {/* <p className="text-red-800 ">Bestseller</p> */}
-                  <h1 className="font-semibold text-lg">{shoe.name}</h1>
+                  <div className="w-[95%] flex items-center justify-between">
+                    <h1 className="font-semibold text-lg">{shoe.name}</h1>
+                    <h1 className="font-semibold text-lg">₹ {shoe.price}</h1>
+                  </div>
                   <p className="text-gray-400 ">{shoe.discription}</p>
                   <p className="text-gray-400">2 Colours</p>
-                  <h1 className="font-semibold text-lg">
-                    MRP : ₹ {shoe.price}
-                  </h1>
                 </div>
               </div>
             </div>

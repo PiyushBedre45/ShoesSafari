@@ -17,7 +17,7 @@ const AllShoes = () => {
   return (
     <>
       <div className="w-full h-full mt-[40px] ">
-        <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center justify-between gap-7">
+        <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center gap-7">
           {regulars.map((regular, index) => (
             <div className=" w-[450px] h-[540px]">
               <div
@@ -37,9 +37,7 @@ const AllShoes = () => {
                   <h1 className="font-semibold text-lg">{regular.name}</h1>
                   <p className="text-gray-400 ">{regular.discription}</p>
                   <p className="text-gray-400">2 Colours</p>
-                  <h1 className="font-semibold text-lg">
-                    MRP : ₹ {regular.price}
-                  </h1>
+                  <h1 className="font-semibold text-lg">₹ {regular.price}</h1>
                 </div>
               </div>
             </div>

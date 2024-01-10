@@ -80,9 +80,7 @@ const Football = () => {
                   <h1 className="font-semibold text-lg">{foot.name}</h1>
                   <p className="text-gray-400 ">{foot.discription}</p>
                   <p className="text-gray-400">2 Colours</p>
-                  <h1 className="font-semibold text-lg">
-                    MRP : ₹ {foot.price}
-                  </h1>
+                  <h1 className="font-semibold text-lg">₹ {foot.price}</h1>
                 </div>
               </div>
             </div>
