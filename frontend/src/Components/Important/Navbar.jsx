@@ -118,10 +118,12 @@ const Navbar = () => {
               <h1>Football Shoes</h1>
             </Link>
           </div>
-          <div className="text-3xl w-[70%] mx-auto  mt-[40px] flex gap-4 items-center">
-            <SiJordan />
-            <h1 className="text-xl">Jordan</h1>
-          </div>
+          <Link to={"/jordan"}>
+            <div className="text-3xl w-[70%] mx-auto  mt-[40px] flex gap-4 items-center">
+              <SiJordan />
+              <h1 className="text-xl">Jordan</h1>
+            </div>
+          </Link>
           <div className="w-[80%] mx-auto flex flex-col gap-4 text-2xl mt-[40px]  ">
             <Link to={"/cart"}>
               <div className="flex items-center gap-5">

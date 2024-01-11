@@ -34,10 +34,12 @@ const AllShoes = () => {
                 </Link>
                 <div className="flex flex-col">
                   {/* <p className="text-red-800 ">Bestseller</p> */}
-                  <h1 className="font-semibold text-lg">{regular.name}</h1>
+                  <div className="w-[95%] flex justify-between items-center">
+                    <h1 className="font-semibold text-lg">{regular.name}</h1>
+                    <h1 className="font-semibold text-lg">₹ {regular.price}</h1>
+                  </div>
                   <p className="text-gray-400 ">{regular.discription}</p>
                   <p className="text-gray-400">2 Colours</p>
-                  <h1 className="font-semibold text-lg">₹ {regular.price}</h1>
                 </div>
               </div>
             </div>

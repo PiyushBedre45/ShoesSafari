@@ -60,10 +60,12 @@ const CategoryWiseMerchandise = () => {
                 </Link>
                 <div className="flex flex-col">
                   {/* <p className="text-red-800 ">Bestseller</p> */}
-                  <h1 className="font-semibold text-lg">{marchan.name}</h1>
+                  <div className="w-[95%] flex justify-between items-center">
+                    <h1 className="font-semibold text-lg">{marchan.name}</h1>
+                    <h1 className="font-semibold text-lg">₹ {marchan.price}</h1>
+                  </div>
                   <p className="text-gray-400 ">{marchan.discription}</p>
                   <p className="text-gray-400">2 Colours</p>
-                  <h1 className="font-semibold text-lg">₹ {marchan.price}</h1>
                 </div>
               </div>
             </div>

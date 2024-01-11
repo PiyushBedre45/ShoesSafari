@@ -17,6 +17,8 @@ import { Toaster } from 'react-hot-toast';
 import Cart from './Components/Cart/Cart';
 import Football from './Components/AllShoesTypes/Football';
 import CategoryWiseMerchandise from './Components/Marchandise/CategoryWiseMarchandise';
+import JordanHome from './Components/Jordan/JordanHome';
+
 
 
 
@@ -60,6 +62,17 @@ function App() {
               <Navbar />
               <Football />
               <Footer />
+
+            </>
+          } />
+
+          <Route path='/jordan' index element={
+            <>
+              <Navbar />
+              <JordanHome />
+              <AllShoes />
+              <Footer />
+
 
             </>
           } />
