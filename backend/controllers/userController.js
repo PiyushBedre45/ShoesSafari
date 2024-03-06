@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt';
+import bcryptjs from 'bcryptjs';
 import { User } from "../models/userModel.js";
 import { sendCookie } from "../utils/features.js";
 
@@ -19,7 +19,7 @@ export const userRegister = async (req, res) => {
         })
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10)
+    const hashedPassword = await bcryptjs.hash(password, 10)
 
     user = await User.create({
         name, email, password: hashedPassword
@@ -47,7 +47,7 @@ export const userLogin = async (req, res) => {
         })
     }
 
-    const isMatch = await bcrypt.compare(password, user.password)
+    const isMatch = await bcryptjs.compare(password, user.password)
 
     if (!isMatch) {
         return res.status(500).json({
