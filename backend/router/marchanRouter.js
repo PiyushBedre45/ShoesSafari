@@ -11,5 +11,4 @@ router.route('/marchandise/regular/bag').get(getBags);
 router.route('/marchandise/regular/cap').get(getCaps);
 router.route('/marchandise/:id').get(getMarchandise);
 
-
 export default router;
