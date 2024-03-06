@@ -13,17 +13,15 @@ config({
 
 const app = express();
 
-
-
 app.use(express.json());
+
 app.use(cors({
     origin: 'http://localhost:3001', // replace with the origin of your frontend
     credentials: true,
 }));
 
+
 app.use(cookieParser());
-
-
 
 app.use(productRouter)
 app.use(userRouter)
@@ -34,4 +32,5 @@ app.get('/', (req, res) => {
 
 })
 
-export default app; 
+export default app;
+
