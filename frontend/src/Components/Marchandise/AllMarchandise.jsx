@@ -6,7 +6,9 @@ const AllMarchandise = () => {
   const [allMarchandise, setAllMarchandise] = useState([]);
 
   const getAllMarchandise = async () => {
-    const respons = await axios.get(`http://localhost:3000/marchandise`);
+    const respons = await axios.get(
+      `https://shoessafari.onrender.com/marchandise`
+    );
     setAllMarchandise(respons.data.marchan);
   };
   useEffect(() => {

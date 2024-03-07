@@ -69,21 +69,6 @@ const productSchema = new mongoose.Schema({
         maxLength: [4, "stock length cannot exceed 4 char"],
         default: 1,
     },
-    reviews: [{
-        name: {
-            type: String,
-            require: true,
-        },
-        rating: {
-            type: String,
-            require: true,
-        },
-        comment: {
-            type: String,
-            require: true,
-
-        },
-    }],
     createdAt: {
         type: Date,
         default: Date.now,

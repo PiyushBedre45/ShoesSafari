@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 const AlwaysIconic = () => {
   const [ico, setIconic] = useState([]);
   const iconicShoes = async () => {
-    const respons = await axios.get(`http://localhost:3000/product/iconic`);
+    const respons = await axios.get(
+      `https://shoessafari.onrender.com/product/iconic`
+    );
     setIconic(respons.data.iconic);
   };
 

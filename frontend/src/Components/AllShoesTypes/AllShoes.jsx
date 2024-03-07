@@ -6,7 +6,9 @@ const AllShoes = () => {
   const [regulars, setRegular] = useState([]);
 
   const getRegular = async () => {
-    const respons = await axios.get(`http://localhost:3000/product/regular`);
+    const respons = await axios.get(
+      `https://shoessafari.onrender.com/product/regular`
+    );
     setRegular(respons.data.regular);
   };
 

@@ -10,7 +10,7 @@ const Product = () => {
   const [cart, setCart] = useCart([]);
 
   const getDetails = async () => {
-    const respons = await axios.get(`http://localhost:3000/product/${id}`);
+    const respons = await axios.get(`https://shoessafari.onrender.com/${id}`);
     setProducts(respons.data.product);
   };
 

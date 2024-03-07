@@ -10,7 +10,9 @@ const Marchandise = () => {
   const { id } = useParams();
 
   const getMarchanDetails = async () => {
-    const respons = await axios.get(`http://localhost:3000/marchandise/${id}`);
+    const respons = await axios.get(
+      `https://shoessafari.onrender.com/marchandise/${id}`
+    );
     setMarchandise(respons.data.marchan);
   };
 

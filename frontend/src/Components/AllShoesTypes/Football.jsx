@@ -6,7 +6,9 @@ const Football = () => {
   const [football, setFootball] = useState([]);
 
   const getFootballShoes = async () => {
-    const respons = await axios.get(`http://localhost:3000/product/football`);
+    const respons = await axios.get(
+      `https://shoessafari.onrender.com/product/football`
+    );
     setFootball(respons.data.football);
     console.log(respons.data.football);
   };
