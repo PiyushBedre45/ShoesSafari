@@ -8,10 +8,14 @@ const Product = () => {
   const [products, setProducts] = useState();
   const { id } = useParams();
   const [cart, setCart] = useCart([]);
+  console.log(id);
 
   const getDetails = async () => {
-    const respons = await axios.get(`https://shoessafari.onrender.com/${id}`);
+    const respons = await axios.get(
+      `https://shoessafari.onrender.com/product/${id}`
+    );
     setProducts(respons.data.product);
+    console.log(respons.data);
   };
 
   useEffect(() => {
