@@ -15,7 +15,6 @@ const Product = () => {
       `https://shoessafari.onrender.com/product/${id}`
     );
     setProducts(respons.data.product);
-    console.log(respons.data);
   };
 
   useEffect(() => {

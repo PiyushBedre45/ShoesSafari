@@ -18,7 +18,6 @@ const AllShoes = () => {
 
   return (
     <>
-      <h1>hi piyush</h1>
       <div className="w-full h-full mt-[40px] ">
         <div className="w-[93%] mx-auto h-full  flex flex-wrap items-center gap-7">
           {regulars.map((regular, index) => (
