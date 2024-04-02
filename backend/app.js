@@ -28,7 +28,7 @@ app.use(userRouter)
 app.use(marchandiseRouter)
 
 app.get('/', (req, res) => {
-    res.send("Hi from /")
+    res.send("Hi from piyu /")
 
 })
 
