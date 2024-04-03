@@ -7,7 +7,7 @@ const AllMarchandise = () => {
 
   const getAllMarchandise = async () => {
     const respons = await axios.get(
-      `https://shoessafari.onrender.com/marchandise`
+      `https://shoessafari-1.onrender.com/marchandise`
     );
     setAllMarchandise(respons.data.marchan);
   };

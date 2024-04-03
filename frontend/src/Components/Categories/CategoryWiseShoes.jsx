@@ -9,18 +9,18 @@ const CategoryWiseShoes = () => {
   const getMenShoes = async () => {
     if (cate === "men") {
       const respons = await axios.get(
-        `https://shoessafari.onrender.com/product/regular/${cate}`
+        `https://shoessafari-1.onrender.com/product/regular/${cate}`
       );
 
       setShoes(respons.data.men);
     } else if (cate === "women") {
       const respons = await axios.get(
-        `https://shoessafari.onrender.com/product/regular/${cate}`
+        `https://shoessafari-1.onrender.com/product/regular/${cate}`
       );
       setShoes(respons.data.women);
     } else if (cate === "kid") {
       const respons = await axios.get(
-        `https://shoessafari.onrender.com/product/regular/${cate}`
+        `https://shoessafari-1.onrender.com/product/regular/${cate}`
       );
 
       setShoes(respons.data.kid);

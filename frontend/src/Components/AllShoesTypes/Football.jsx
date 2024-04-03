@@ -7,7 +7,7 @@ const Football = () => {
 
   const getFootballShoes = async () => {
     const respons = await axios.get(
-      `https://shoessafari.onrender.com/product/football`
+      `https://shoessafari-1.onrender.com/product/football`
     );
     setFootball(respons.data.football);
     console.log(respons.data.football);

@@ -6,7 +6,7 @@ const AlwaysIconic = () => {
   const [ico, setIconic] = useState([]);
   const iconicShoes = async () => {
     const respons = await axios.get(
-      `https://shoessafari.onrender.com/product/iconic`
+      `https://shoessafari-1.onrender.com/product/iconic`
     );
     setIconic(respons.data.iconic);
   };

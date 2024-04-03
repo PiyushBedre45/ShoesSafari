@@ -11,7 +11,7 @@ const Marchandise = () => {
 
   const getMarchanDetails = async () => {
     const respons = await axios.get(
-      `https://shoessafari.onrender.com/marchandise/${id}`
+      `https://shoessafari-1.onrender.com/marchandise/${id}`
     );
     setMarchandise(respons.data.marchan);
   };

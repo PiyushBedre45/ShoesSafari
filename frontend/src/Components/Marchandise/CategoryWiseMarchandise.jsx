@@ -10,22 +10,22 @@ const CategoryWiseMerchandise = () => {
   const getCateMerchandise = async () => {
     if (category === "men") {
       const response = await axios.get(
-        `https://shoessafari.onrender.com/marchandise/regular/${category}`
+        `https://shoessafari-1.onrender.com/marchandise/regular/${category}`
       );
       setMerchandise(response.data.menMerchan);
     } else if (category === "women") {
       const response = await axios.get(
-        `https://shoessafari.onrender.com/marchandise/regular/${category}`
+        `https://shoessafari-1.onrender.com/marchandise/regular/${category}`
       );
       setMerchandise(response.data.womenMerchan);
     } else if (category === "bag") {
       const response = await axios.get(
-        `https://shoessafari.onrender.com/marchandise/regular/${category}`
+        `https://shoessafari-1.onrender.com/marchandise/regular/${category}`
       );
       setMerchandise(response.data.bag);
     } else if (category === "cap") {
       const response = await axios.get(
-        `https://shoessafari.onrender.com/marchandise/regular/${category}`
+        `https://shoessafari-1.onrender.com/marchandise/regular/${category}`
       );
       setMerchandise(response.data.cap);
     }

@@ -12,7 +12,7 @@ const Product = () => {
 
   const getDetails = async () => {
     const respons = await axios.get(
-      `https://shoessafari.onrender.com/product/${id}`
+      `https://shoessafari-1.onrender.com/product/${id}`
     );
     setProducts(respons.data.product);
   };

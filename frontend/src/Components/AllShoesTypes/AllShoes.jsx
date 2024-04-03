@@ -7,7 +7,7 @@ const AllShoes = () => {
 
   const getRegular = async () => {
     const respons = await axios.get(
-      `https://shoessafari.onrender.com/product/regular`
+      `https://shoessafari-1.onrender.com/product/regular`
     );
     setRegular(respons.data.regular);
   };
