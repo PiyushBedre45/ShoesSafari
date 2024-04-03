@@ -5,7 +5,7 @@ import App from './App';
 import { CartProvider } from './context/cartContext';
 import { AuthProvider } from './context/authContext';
 
-export const server = "https://shoessafari-1.onrender.com";
+export const server = "https://shoessafari-1.onrender.com"; //http://localhost:3000
 export const Context = createContext({ isAuthenticate: false })
 
 const AppWrapper = () => {

@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: 'https://shoes-safari.vercel.app/', // replace with the origin of your frontend
+    origin: 'https://shoes-safari.vercel.app', // http://localhost:3001 replace with the origin of your frontend
     credentials: true,
 }));
 
