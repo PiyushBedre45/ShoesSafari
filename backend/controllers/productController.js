@@ -18,7 +18,7 @@ export const newProduct = async (req, res, next) => {
 // GET ALL PRODUCT FROM THE DATABASE
 
 export const getAllProducts = async (req, res) => {
-    const products = await Product.find({ isAvatarImageSet: true })
+    const products = await Product.find()
     res.json({
         success: true,
         message: "get all products",
