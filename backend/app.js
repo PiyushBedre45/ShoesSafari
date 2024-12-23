@@ -30,7 +30,6 @@ app.use(marchandiseRouter)
 
 app.get('/', (req, res) => {
     res.send("Hi from piyu /")
-
 })
 
 export default app;
